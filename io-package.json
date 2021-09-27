@@ -64,8 +64,7 @@
         ]
     },
     "native": {
-        "option1": true,
-        "option2": "42"
+        "serials": []
     },
     "objects": [],
     "instanceObjects": [

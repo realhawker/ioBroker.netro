@@ -25,10 +25,12 @@ class Netro extends utils.Adapter {
     }
 
     private async updateDevices(): Promise<void> {
-        for (let i = 0; i < this.config.serials.length; i++) {
-            const serial = this.config.serials[i];
-            await this.updateDeviceInfo(serial);
-            await this.updateSensorData(serial);
+        if (this.config.serials) {
+            for (let i = 0; i < this.config.serials.length; i++) {
+                const serial = this.config.serials[i];
+                await this.updateDeviceInfo(serial);
+                await this.updateSensorData(serial);
+            }
         }
     }
 
