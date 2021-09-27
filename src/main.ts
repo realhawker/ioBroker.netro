@@ -62,7 +62,7 @@ class Netro extends utils.Adapter {
             native: {},
         });
 
-        await this.setObjectNotExistsAsync(serial + ".Info", {
+        await this.setObjectNotExistsAsync(serial + ".info", {
             type: "channel",
             common: {
                 name: "Info",
@@ -70,7 +70,7 @@ class Netro extends utils.Adapter {
             native: {},
         });
 
-        await this.setObjectNotExistsAsync(serial + ".Info.name", {
+        await this.setObjectNotExistsAsync(serial + ".info.name", {
             type: "state",
             common: {
                 name: "name",
@@ -81,9 +81,9 @@ class Netro extends utils.Adapter {
             },
             native: {},
         });
-        await this.setStateAsync(serial + ".Info.name", data.name, true);
+        await this.setStateAsync(serial + ".info.name", data.name, true);
 
-        await this.setObjectNotExistsAsync(serial + ".Info.serial", {
+        await this.setObjectNotExistsAsync(serial + ".info.serial", {
             type: "state",
             common: {
                 name: "serial",
@@ -94,9 +94,9 @@ class Netro extends utils.Adapter {
             },
             native: {},
         });
-        await this.setStateAsync(serial + ".Info.serial", data.serial, true);
+        await this.setStateAsync(serial + ".info.serial", data.serial, true);
 
-        await this.setObjectNotExistsAsync(serial + ".Info.version", {
+        await this.setObjectNotExistsAsync(serial + ".info.version", {
             type: "state",
             common: {
                 name: "version",
@@ -107,9 +107,9 @@ class Netro extends utils.Adapter {
             },
             native: {},
         });
-        await this.setStateAsync(serial + ".Info.version", data.version, true);
+        await this.setStateAsync(serial + ".info.version", data.version, true);
 
-        await this.setObjectNotExistsAsync(serial + ".Info.status", {
+        await this.setObjectNotExistsAsync(serial + ".info.status", {
             type: "state",
             common: {
                 name: "status",
@@ -120,9 +120,9 @@ class Netro extends utils.Adapter {
             },
             native: {},
         });
-        await this.setStateAsync(serial + ".Info.status", data.status, true);
+        await this.setStateAsync(serial + ".info.status", data.status, true);
 
-        await this.setObjectNotExistsAsync(serial + ".Info.sw_version", {
+        await this.setObjectNotExistsAsync(serial + ".info.sw_version", {
             type: "state",
             common: {
                 name: "sw_version",
@@ -133,7 +133,7 @@ class Netro extends utils.Adapter {
             },
             native: {},
         });
-        await this.setStateAsync(serial + ".Info.sw_version", data.sw_version, true);
+        await this.setStateAsync(serial + ".info.sw_version", data.sw_version, true);
     }
 
     private async updateSensorData(serial: string): Promise<void> {
@@ -180,7 +180,7 @@ class Netro extends utils.Adapter {
             native: {},
         });
 
-        await this.setObjectNotExistsAsync(serial + ".SensorData", {
+        await this.setObjectNotExistsAsync(serial + ".sensor-data", {
             type: "channel",
             common: {
                 name: "SensorData",
@@ -188,7 +188,7 @@ class Netro extends utils.Adapter {
             native: {},
         });
 
-        await this.setObjectNotExistsAsync(serial + ".SensorData.time", {
+        await this.setObjectNotExistsAsync(serial + ".sensor-data.time", {
             type: "state",
             common: {
                 name: "time",
@@ -199,9 +199,9 @@ class Netro extends utils.Adapter {
             },
             native: {},
         });
-        await this.setStateAsync(serial + ".SensorData.time", new Date(data.time).getTime(), true);
+        await this.setStateAsync(serial + ".sensor-data.time", new Date(data.time).getTime(), true);
 
-        await this.setObjectNotExistsAsync(serial + ".SensorData.celsius", {
+        await this.setObjectNotExistsAsync(serial + ".sensor-data.celsius", {
             type: "state",
             common: {
                 name: "celsius",
@@ -213,9 +213,9 @@ class Netro extends utils.Adapter {
             },
             native: {},
         });
-        await this.setStateAsync(serial + ".SensorData.celsius", data.celsius, true);
+        await this.setStateAsync(serial + ".sensor-data.celsius", data.celsius, true);
 
-        await this.setObjectNotExistsAsync(serial + ".SensorData.fahrenheit", {
+        await this.setObjectNotExistsAsync(serial + ".sensor-data.fahrenheit", {
             type: "state",
             common: {
                 name: "fahrenheit",
@@ -227,9 +227,9 @@ class Netro extends utils.Adapter {
             },
             native: {},
         });
-        await this.setStateAsync(serial + ".SensorData.fahrenheit", data.fahrenheit, true);
+        await this.setStateAsync(serial + ".sensor-data.fahrenheit", data.fahrenheit, true);
 
-        await this.setObjectNotExistsAsync(serial + ".SensorData.moisture", {
+        await this.setObjectNotExistsAsync(serial + ".sensor-data.moisture", {
             type: "state",
             common: {
                 name: "moisture",
@@ -240,9 +240,9 @@ class Netro extends utils.Adapter {
             },
             native: {},
         });
-        await this.setStateAsync(serial + ".SensorData.moisture", data.moisture, true);
+        await this.setStateAsync(serial + ".sensor-data.moisture", data.moisture, true);
 
-        await this.setObjectNotExistsAsync(serial + ".SensorData.sunlight", {
+        await this.setObjectNotExistsAsync(serial + ".sensor-data.sunlight", {
             type: "state",
             common: {
                 name: "sunlight",
@@ -253,7 +253,7 @@ class Netro extends utils.Adapter {
             },
             native: {},
         });
-        await this.setStateAsync(serial + ".SensorData.sunlight", data.sunlight, true);
+        await this.setStateAsync(serial + ".sensor-data.sunlight", data.sunlight, true);
     }
 
     /**
