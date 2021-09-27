@@ -1,6 +1,5 @@
 import * as utils from "@iobroker/adapter-core";
-import fetch from 'cross-fetch';
-
+import fetch from "cross-fetch";
 
 class Netro extends utils.Adapter {
     private interval: ioBroker.Interval;
@@ -25,50 +24,48 @@ class Netro extends utils.Adapter {
         await this.updateDevices();
     }
 
-    private async updateDevices() {
-        for (var i = 0; i < this.config.serials.length; i++) {
-            var serial = this.config.serials[i];
+    private async updateDevices(): Promise<void> {
+        for (let i = 0; i < this.config.serials.length; i++) {
+            const serial = this.config.serials[i];
             await this.updateDeviceInfo(serial);
             await this.updateSensorData(serial);
-
         }
     }
 
-    private async updateDeviceInfo(serial: string) {
+    private async updateDeviceInfo(serial: string): Promise<void> {
         return fetch(`https://api.netrohome.com/npa/v1/info.json?key=${serial}`)
-            .then(response => response.json())
+            .then((response) => response.json())
             .then(async (data: GetDeviceInfoResponse) => {
                 await this.handleDeviceInfo(serial, data);
             })
-            .catch(reason => this.log.error(reason));
+            .catch((reason) => this.log.error(reason));
     }
 
-    private async handleDeviceInfo(serial: string, data: GetDeviceInfoResponse) {
+    private async handleDeviceInfo(serial: string, data: GetDeviceInfoResponse): Promise<void> {
         this.setState("info.connection", true, true);
         if (data.status == "OK") {
             this.log.debug("DeviceInfo: serial=" + serial + " data=" + JSON.stringify(data));
             await this.setDeviceInfoStates(serial, data.data.device);
-        }
-        else {
+        } else {
             this.log.error("DeviceInfo: serial=" + serial + " data=" + JSON.stringify(data));
         }
     }
 
-    private async setDeviceInfoStates(serial: string, data: DeviceInfo) {
+    private async setDeviceInfoStates(serial: string, data: DeviceInfo): Promise<void> {
         await this.setObjectNotExistsAsync(serial, {
             type: "device",
             common: {
-                name: serial
+                name: serial,
             },
-            native: {}
+            native: {},
         });
 
         await this.setObjectNotExistsAsync(serial + ".Info", {
             type: "channel",
             common: {
-                name: "Info"
+                name: "Info",
             },
-            native: {}
+            native: {},
         });
 
         await this.setObjectNotExistsAsync(serial + ".Info.name", {
@@ -80,7 +77,7 @@ class Netro extends utils.Adapter {
                 read: true,
                 write: false,
             },
-            native: {}
+            native: {},
         });
         await this.setStateAsync(serial + ".Info.name", data.name, true);
 
@@ -93,7 +90,7 @@ class Netro extends utils.Adapter {
                 read: true,
                 write: false,
             },
-            native: {}
+            native: {},
         });
         await this.setStateAsync(serial + ".Info.serial", data.serial, true);
 
@@ -106,7 +103,7 @@ class Netro extends utils.Adapter {
                 read: true,
                 write: false,
             },
-            native: {}
+            native: {},
         });
         await this.setStateAsync(serial + ".Info.version", data.version, true);
 
@@ -119,7 +116,7 @@ class Netro extends utils.Adapter {
                 read: true,
                 write: false,
             },
-            native: {}
+            native: {},
         });
         await this.setStateAsync(serial + ".Info.status", data.status, true);
 
@@ -132,24 +129,26 @@ class Netro extends utils.Adapter {
                 read: true,
                 write: false,
             },
-            native: {}
+            native: {},
         });
         await this.setStateAsync(serial + ".Info.sw_version", data.sw_version, true);
     }
 
-    private async updateSensorData(serial: string) {
-        let date = new Date();
-        let dateString = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
+    private async updateSensorData(serial: string): Promise<void> {
+        const date = new Date();
+        const dateString = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
         this.log.debug(dateString);
-        return fetch(`http://api.netrohome.com/npa/v1/sensor_data.json?key=${serial}&start_date=${dateString}&end_date=${dateString}`)
-            .then(response => response.json())
+        return fetch(
+            `http://api.netrohome.com/npa/v1/sensor_data.json?key=${serial}&start_date=${dateString}&end_date=${dateString}`,
+        )
+            .then((response) => response.json())
             .then(async (data: GetSensorDataResponse) => {
                 await this.handleSensorData(serial, data);
             })
-            .catch(reason => this.log.error(reason));
+            .catch((reason) => this.log.error(reason));
     }
 
-    private async handleSensorData(serial: string, data: GetSensorDataResponse) {
+    private async handleSensorData(serial: string, data: GetSensorDataResponse): Promise<void> {
         this.setState("info.connection", true, true);
         if (data.status == "OK") {
             this.log.debug("SensorData: serial=" + serial + " data=" + JSON.stringify(data));
@@ -165,28 +164,26 @@ class Netro extends utils.Adapter {
             if (last) {
                 await this.setSensorDataStates(serial, last);
             }
-
-        }
-        else {
+        } else {
             this.log.error("SensorData: serial=" + serial + " data=" + JSON.stringify(data));
         }
     }
 
-    private async setSensorDataStates(serial: string, data: SensorData) {
+    private async setSensorDataStates(serial: string, data: SensorData): Promise<void> {
         await this.setObjectNotExistsAsync(serial, {
             type: "device",
             common: {
-                name: serial
+                name: serial,
             },
-            native: {}
+            native: {},
         });
 
         await this.setObjectNotExistsAsync(serial + ".SensorData", {
             type: "channel",
             common: {
-                name: "SensorData"
+                name: "SensorData",
             },
-            native: {}
+            native: {},
         });
 
         await this.setObjectNotExistsAsync(serial + ".SensorData.time", {
@@ -198,7 +195,7 @@ class Netro extends utils.Adapter {
                 read: true,
                 write: false,
             },
-            native: {}
+            native: {},
         });
         await this.setStateAsync(serial + ".SensorData.time", new Date(data.time).getTime(), true);
 
@@ -212,7 +209,7 @@ class Netro extends utils.Adapter {
                 read: true,
                 write: false,
             },
-            native: {}
+            native: {},
         });
         await this.setStateAsync(serial + ".SensorData.celsius", data.celsius, true);
 
@@ -226,7 +223,7 @@ class Netro extends utils.Adapter {
                 read: true,
                 write: false,
             },
-            native: {}
+            native: {},
         });
         await this.setStateAsync(serial + ".SensorData.fahrenheit", data.fahrenheit, true);
 
@@ -239,7 +236,7 @@ class Netro extends utils.Adapter {
                 read: true,
                 write: false,
             },
-            native: {}
+            native: {},
         });
         await this.setStateAsync(serial + ".SensorData.moisture", data.moisture, true);
 
@@ -252,11 +249,10 @@ class Netro extends utils.Adapter {
                 read: true,
                 write: false,
             },
-            native: {}
+            native: {},
         });
         await this.setStateAsync(serial + ".SensorData.sunlight", data.sunlight, true);
     }
-
 
     /**
      * Is called when adapter shuts down - callback has to be called under any circumstances!
