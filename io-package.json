@@ -1,0 +1,94 @@
+{
+    "common": {
+        "name": "netro",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "Netro",
+        "titleLang": {
+            "en": "Netro",
+            "de": "Netro",
+            "ru": "Нетро",
+            "pt": "Netro",
+            "nl": "Netro",
+            "fr": "Réseau",
+            "it": "Netro",
+            "es": "Netro",
+            "pl": "Netro",
+            "zh-cn": "内特罗"
+        },
+        "desc": {
+            "en": "Adapter for Netro components",
+            "de": "Adapter für Netro-Komponenten",
+            "ru": "Адаптер для компонентов Netro",
+            "pt": "Adaptador para componentes Netro",
+            "nl": "Adapter voor Netro-componenten",
+            "fr": "Adaptateur pour composants Netro",
+            "it": "Adattatore per componenti Netro",
+            "es": "Adaptador para componentes Netro",
+            "pl": "Adapter do komponentów Netro",
+            "zh-cn": "Netro 组件的适配器"
+        },
+        "authors": ["realhawker <jan-gerrit@schettler-koehler.de>"],
+        "keywords": ["ioBroker", "template", "Smart Home", "home automation"],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "build/main.js",
+        "icon": "netro.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/main/admin/netro.png",
+        "readme": "https://github.com/realhawker/ioBroker.netro/blob/main/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "garden",
+        "compact": true,
+        "connectionType": "cloud",
+        "dataSource": "poll",
+        "materialize": true,
+        "dependencies": [
+            {
+                "js-controller": ">=2.0.0"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}

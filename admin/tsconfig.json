@@ -1,0 +1,8 @@
+{
+    "extends": "../tsconfig.json",
+    "include": [
+        "./admin.d.ts",
+        "./**/*.js",
+        "../src/lib/adapter-config.d.ts"
+    ]
+}
