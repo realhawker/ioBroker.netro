@@ -23,6 +23,10 @@ Adapter for Netro components
     ### **WORK IN PROGRESS**
 -->
 
+### 0.0.3
+
+-   (realhawker) bug fixes
+
 ### 0.0.2
 
 -   (realhawker) bug fixes

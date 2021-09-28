@@ -1,6 +1,6 @@
 {
   "name": "iobroker.netro",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Adapter for Netro components",
   "author": {
     "name": "realhawker",
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:realhawker/ioBroker.netro.git"
+    "url": "git+https://github.com/realhawker/ioBroker.netro.git"
   },
   "dependencies": {
     "@iobroker/adapter-core": "^2.5.1",
