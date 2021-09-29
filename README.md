@@ -14,7 +14,7 @@
 
 ## netro adapter for ioBroker
 
-Adapter for Netro components
+Adapter for Netro (https://www.netrohome.com/) components
 
 ## Changelog
 
