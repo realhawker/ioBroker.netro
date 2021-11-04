@@ -47,7 +47,7 @@ class Netro extends utils.Adapter {
         this.setState("info.connection", true, true);
         if (data.status == "OK") {
             this.log.debug("DeviceInfo: serial=" + serial + " data=" + JSON.stringify(data));
-            await this.setDeviceInfoStates(serial, data.data.device);
+            await this.setDeviceInfoStates(serial, data.data.device || data.data.sensor);
         } else {
             this.log.error("DeviceInfo: serial=" + serial + " data=" + JSON.stringify(data));
         }

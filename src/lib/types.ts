@@ -28,16 +28,15 @@ declare global {
 
     interface DeviceInfoBody {
         device: DeviceInfo;
+        sensor: DeviceInfo;
     }
 
     interface DeviceInfo {
         name: string;
-        zone_num: number;
         serial: string;
-        version: string;
         status: DeviceStatus;
+        version: string;
         sw_version: string;
-        zones: Zone[];
     }
 
     interface Zone {
