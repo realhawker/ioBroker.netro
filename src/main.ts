@@ -254,6 +254,19 @@ class Netro extends utils.Adapter {
             native: {},
         });
         await this.setStateAsync(serial + ".sensor-data.sunlight", data.sunlight, true);
+
+        await this.setObjectNotExistsAsync(serial + ".sensor-data.battery_level", {
+            type: "state",
+            common: {
+                name: "battery_level",
+                type: "number",
+                role: "value",
+                read: true,
+                write: false,
+            },
+            native: {},
+        });
+        await this.setStateAsync(serial + ".sensor-data.battery_level", data.battery_level, true);
     }
 
     /**

@@ -24,6 +24,7 @@ declare global {
         sunlight: number;
         celsius: number;
         fahrenheit: number;
+        battery_level: number;
     }
 
     interface DeviceInfoBody {

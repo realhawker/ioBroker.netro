@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "netro",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "news": {
             "0.0.1": {
                 "en": "initial release",
@@ -62,6 +62,18 @@
                 "es": "Adaptado a los cambios de API",
                 "pl": "Dostosowany do zmian API",
                 "zh-cn": "适应 API 变化"
+            },
+            "0.0.6": {
+                "en": "Added battery_level",
+                "de": "Batteriestand hinzugefügt",
+                "ru": "Добавлен уровень заряда батареи",
+                "pt": "Adicionado nível_da_ bateria",
+                "nl": "Battery_level toegevoegd",
+                "fr": "Niveau de batterie ajouté",
+                "it": "Aggiunto livello_batteria",
+                "es": "Nivel de batería agregado",
+                "pl": "Dodano poziom baterii",
+                "zh-cn": "添加了battery_level"
             }
         },
         "title": "Netro",
