@@ -274,7 +274,7 @@ class Netro extends utils.Adapter {
      */
     private onUnload(callback: () => void): void {
         try {
-            clearInterval(this.interval);
+            this.clearInterval(this.interval);
             callback();
         } catch (e) {
             callback();

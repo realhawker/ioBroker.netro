@@ -23,6 +23,18 @@ Adapter for Netro (https://www.netrohome.com/) components
     ### **WORK IN PROGRESS**
 -->
 
+### 0.0.7
+
+-   (realhawker) Removed warning from log
+
+### 0.0.6
+
+-   (realhawker) Added battery_level
+
+### 0.0.5
+
+-   (realhawker) Adapted to API changes
+
 ### 0.0.4
 
 -   (realhawker) Made adapter ready for release
