@@ -123,6 +123,7 @@
         "extIcon": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/master/admin/netro.png",
         "readme": "https://github.com/realhawker/ioBroker.netro/blob/master/README.md",
         "loglevel": "info",
+        "tier": 2,
         "mode": "daemon",
         "type": "garden",
         "compact": true,
