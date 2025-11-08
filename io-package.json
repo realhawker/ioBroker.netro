@@ -115,7 +115,10 @@
         },
         "authors": ["realhawker <jan-gerrit@schettler-koehler.de>"],
         "keywords": ["ioBroker", "template", "Smart Home", "home automation"],
-        "license": "MIT",
+        "licenseInformation": {
+            "type": "free",
+            "license": "MIT"
+        },
         "platform": "Javascript/Node.js",
         "main": "build/main.js",
         "icon": "netro.png",
