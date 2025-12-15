@@ -117,7 +117,6 @@
         "keywords": ["ioBroker", "template", "Smart Home", "home automation"],
         "license": "MIT",
         "platform": "Javascript/Node.js",
-        "main": "build/main.js",
         "icon": "netro.png",
         "enabled": true,
         "extIcon": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/master/admin/netro.png",
