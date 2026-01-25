@@ -114,7 +114,10 @@
             "zh-cn": "Netro 组件的适配器"
         },
         "authors": ["realhawker <jan-gerrit@schettler-koehler.de>"],
-        "keywords": ["ioBroker", "template", "Smart Home", "home automation"],
+        "keywords": [
+                "template",
+                "home automation"
+        ],
         "license": "MIT",
         "platform": "Javascript/Node.js",
         "main": "build/main.js",
