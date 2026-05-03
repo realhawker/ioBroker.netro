@@ -51,6 +51,8 @@ Adapter for Netro (https://www.netrohome.com/) components
 
 -   (realhawker) initial release
 
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
 ## License
 
 MIT License
