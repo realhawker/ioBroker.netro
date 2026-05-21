@@ -1,165 +1,172 @@
 {
-    "common": {
-        "name": "netro",
-        "version": "0.0.7",
-        "news": {
-            "0.0.1": {
-                "en": "initial release",
-                "de": "Erstveröffentlichung",
-                "ru": "Начальная версия",
-                "pt": "lançamento inicial",
-                "nl": "Eerste uitgave",
-                "fr": "Première version",
-                "it": "Versione iniziale",
-                "es": "Versión inicial",
-                "pl": "Pierwsze wydanie",
-                "zh-cn": "首次出版"
-            },
-            "0.0.2": {
-                "en": "bug fixes",
-                "de": "Fehlerbehebung",
-                "ru": "исправление ошибок",
-                "pt": "correções de bugs",
-                "nl": "bugfixes",
-                "fr": "corrections de bugs",
-                "it": "correzioni di bug",
-                "es": "corrección de errores",
-                "pl": "poprawki błędów",
-                "zh-cn": "bug修复"
-            },
-            "0.0.3": {
-                "en": "bug fixes",
-                "de": "Fehlerbehebung",
-                "ru": "исправление ошибок",
-                "pt": "correções de bugs",
-                "nl": "bugfixes",
-                "fr": "corrections de bugs",
-                "it": "correzioni di bug",
-                "es": "corrección de errores",
-                "pl": "poprawki błędów",
-                "zh-cn": "bug修复"
-            },
-            "0.0.4": {
-                "en": "Made adapter ready for release",
-                "de": "Adapter bereit zur Freigabe gemacht",
-                "ru": "Адаптер готов к выпуску",
-                "pt": "Adaptador pronto para lançamento",
-                "nl": "Adapter klaar gemaakt voor release",
-                "fr": "Adaptateur fait prêt pour la libération",
-                "it": "Adattatore pronto per il rilascio",
-                "es": "Adaptador hecho listo para su lanzamiento",
-                "pl": "Wykonany adapter gotowy do wydania",
-                "zh-cn": "准备好发布的适配器"
-            },
-            "0.0.5": {
-                "en": "Adapted to API changes",
-                "de": "An API-Änderungen angepasst",
-                "ru": "Адаптирован к изменениям API",
-                "pt": "Adaptado às mudanças de API",
-                "nl": "Aangepast aan API-wijzigingen",
-                "fr": "Adapté aux changements d'API",
-                "it": "Adattato alle modifiche API",
-                "es": "Adaptado a los cambios de API",
-                "pl": "Dostosowany do zmian API",
-                "zh-cn": "适应 API 变化"
-            },
-            "0.0.6": {
-                "en": "Added battery_level",
-                "de": "Batteriestand hinzugefügt",
-                "ru": "Добавлен уровень заряда батареи",
-                "pt": "Adicionado nível_da_ bateria",
-                "nl": "Battery_level toegevoegd",
-                "fr": "Niveau de batterie ajouté",
-                "it": "Aggiunto livello_batteria",
-                "es": "Nivel de batería agregado",
-                "pl": "Dodano poziom baterii",
-                "zh-cn": "添加了battery_level"
-            },
-            "0.0.7": {
-                "en": "Removed warning from log",
-                "de": "Warnung aus Log entfernt",
-                "ru": "Удалено предупреждение из журнала",
-                "pt": "Aviso removido do log",
-                "nl": "Waarschuwing uit log verwijderd",
-                "fr": "Avertissement supprimé du journal",
-                "it": "Avviso rimosso dal registro",
-                "es": "Advertencia eliminada del registro",
-                "pl": "Usunięto ostrzeżenie z dziennika",
-                "zh-cn": "从日志中删除警告"
-            }
-        },
-        "title": "Netro",
-        "titleLang": {
-            "en": "Netro",
-            "de": "Netro",
-            "ru": "Нетро",
-            "pt": "Netro",
-            "nl": "Netro",
-            "fr": "Réseau",
-            "it": "Netro",
-            "es": "Netro",
-            "pl": "Netro",
-            "zh-cn": "内特罗"
-        },
-        "desc": {
-            "en": "Adapter for Netro components",
-            "de": "Adapter für Netro-Komponenten",
-            "ru": "Адаптер для компонентов Netro",
-            "pt": "Adaptador para componentes Netro",
-            "nl": "Adapter voor Netro-componenten",
-            "fr": "Adaptateur pour composants Netro",
-            "it": "Adattatore per componenti Netro",
-            "es": "Adaptador para componentes Netro",
-            "pl": "Adapter do komponentów Netro",
-            "zh-cn": "Netro 组件的适配器"
-        },
-        "authors": ["realhawker <jan-gerrit@schettler-koehler.de>"],
-        "keywords": ["ioBroker", "template", "Smart Home", "home automation"],
-        "license": "MIT",
-        "platform": "Javascript/Node.js",
-        "main": "build/main.js",
-        "icon": "netro.png",
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/master/admin/netro.png",
-        "readme": "https://github.com/realhawker/ioBroker.netro/blob/master/README.md",
-        "loglevel": "info",
-        "mode": "daemon",
-        "type": "garden",
-        "compact": true,
-        "connectionType": "cloud",
-        "dataSource": "poll",
-        "materialize": true,
-        "dependencies": [
-            {
-                "js-controller": ">=2.0.0"
-            }
-        ]
+  "common": {
+    "name": "netro",
+    "version": "0.0.7",
+    "news": {
+      "0.0.1": {
+        "en": "initial release",
+        "de": "Erstveröffentlichung",
+        "ru": "Начальная версия",
+        "pt": "lançamento inicial",
+        "nl": "Eerste uitgave",
+        "fr": "Première version",
+        "it": "Versione iniziale",
+        "es": "Versión inicial",
+        "pl": "Pierwsze wydanie",
+        "zh-cn": "首次出版"
+      },
+      "0.0.2": {
+        "en": "bug fixes",
+        "de": "Fehlerbehebung",
+        "ru": "исправление ошибок",
+        "pt": "correções de bugs",
+        "nl": "bugfixes",
+        "fr": "corrections de bugs",
+        "it": "correzioni di bug",
+        "es": "corrección de errores",
+        "pl": "poprawki błędów",
+        "zh-cn": "bug修复"
+      },
+      "0.0.3": {
+        "en": "bug fixes",
+        "de": "Fehlerbehebung",
+        "ru": "исправление ошибок",
+        "pt": "correções de bugs",
+        "nl": "bugfixes",
+        "fr": "corrections de bugs",
+        "it": "correzioni di bug",
+        "es": "corrección de errores",
+        "pl": "poprawki błędów",
+        "zh-cn": "bug修复"
+      },
+      "0.0.4": {
+        "en": "Made adapter ready for release",
+        "de": "Adapter bereit zur Freigabe gemacht",
+        "ru": "Адаптер готов к выпуску",
+        "pt": "Adaptador pronto para lançamento",
+        "nl": "Adapter klaar gemaakt voor release",
+        "fr": "Adaptateur fait prêt pour la libération",
+        "it": "Adattatore pronto per il rilascio",
+        "es": "Adaptador hecho listo para su lanzamiento",
+        "pl": "Wykonany adapter gotowy do wydania",
+        "zh-cn": "准备好发布的适配器"
+      },
+      "0.0.5": {
+        "en": "Adapted to API changes",
+        "de": "An API-Änderungen angepasst",
+        "ru": "Адаптирован к изменениям API",
+        "pt": "Adaptado às mudanças de API",
+        "nl": "Aangepast aan API-wijzigingen",
+        "fr": "Adapté aux changements d'API",
+        "it": "Adattato alle modifiche API",
+        "es": "Adaptado a los cambios de API",
+        "pl": "Dostosowany do zmian API",
+        "zh-cn": "适应 API 变化"
+      },
+      "0.0.6": {
+        "en": "Added battery_level",
+        "de": "Batteriestand hinzugefügt",
+        "ru": "Добавлен уровень заряда батареи",
+        "pt": "Adicionado nível_da_ bateria",
+        "nl": "Battery_level toegevoegd",
+        "fr": "Niveau de batterie ajouté",
+        "it": "Aggiunto livello_batteria",
+        "es": "Nivel de batería agregado",
+        "pl": "Dodano poziom baterii",
+        "zh-cn": "添加了battery_level"
+      },
+      "0.0.7": {
+        "en": "Removed warning from log",
+        "de": "Warnung aus Log entfernt",
+        "ru": "Удалено предупреждение из журнала",
+        "pt": "Aviso removido do log",
+        "nl": "Waarschuwing uit log verwijderd",
+        "fr": "Avertissement supprimé du journal",
+        "it": "Avviso rimosso dal registro",
+        "es": "Advertencia eliminada del registro",
+        "pl": "Usunięto ostrzeżenie z dziennika",
+        "zh-cn": "从日志中删除警告"
+      }
     },
-    "native": {
-        "serials": []
+    "title": "Netro",
+    "titleLang": {
+      "en": "Netro",
+      "de": "Netro",
+      "ru": "Нетро",
+      "pt": "Netro",
+      "nl": "Netro",
+      "fr": "Réseau",
+      "it": "Netro",
+      "es": "Netro",
+      "pl": "Netro",
+      "zh-cn": "内特罗"
     },
-    "objects": [],
-    "instanceObjects": [
-        {
-            "_id": "info",
-            "type": "channel",
-            "common": {
-                "name": "Information"
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.connection",
-            "type": "state",
-            "common": {
-                "role": "indicator.connected",
-                "name": "Device or service connected",
-                "type": "boolean",
-                "read": true,
-                "write": false,
-                "def": false
-            },
-            "native": {}
-        }
+    "desc": {
+      "en": "Adapter for Netro components",
+      "de": "Adapter für Netro-Komponenten",
+      "ru": "Адаптер для компонентов Netro",
+      "pt": "Adaptador para componentes Netro",
+      "nl": "Adapter voor Netro-componenten",
+      "fr": "Adaptateur pour composants Netro",
+      "it": "Adattatore per componenti Netro",
+      "es": "Adaptador para componentes Netro",
+      "pl": "Adapter do komponentów Netro",
+      "zh-cn": "Netro 组件的适配器"
+    },
+    "authors": [
+      "realhawker <jan-gerrit@schettler-koehler.de>"
+    ],
+    "keywords": [
+      "ioBroker",
+      "template",
+      "Smart Home",
+      "home automation"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "main": "build/main.js",
+    "icon": "netro.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/master/admin/netro.png",
+    "readme": "https://github.com/realhawker/ioBroker.netro/blob/master/README.md",
+    "loglevel": "info",
+    "mode": "daemon",
+    "type": "garden",
+    "compact": true,
+    "connectionType": "cloud",
+    "dataSource": "poll",
+    "materialize": true,
+    "dependencies": [
+      {
+        "js-controller": ">=6.0.11"
+      }
     ]
+  },
+  "native": {
+    "serials": []
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Device or service connected",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
 }
