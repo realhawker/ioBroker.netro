@@ -23,6 +23,10 @@ Adapter for Netro (https://www.netrohome.com/) components
     ### **WORK IN PROGRESS**
 -->
 
+
+### **WORK IN PROGRESS**
+- (ioBroker-Bot) Adapter requires js-controller >= 6.0.11 now.
+
 ### 0.0.7
 
 -   (realhawker) Removed warning from log
